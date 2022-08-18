@@ -4,9 +4,23 @@ import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import PersonIcon from "@mui/icons-material/Person";
 import GroupsIcon from "@mui/icons-material/Groups";
+import "../styles/ToggleButton.css";
+import { makeStyles } from "@material-ui/core";
+
+const toggleStyles = makeStyles(
+  {
+    root: {
+      "&:focus": {
+        border: "2px solid #674DE4",
+      },
+    },
+  },
+  { name: "MuiButton" }
+);
 
 export default function ToggleButtons() {
-  const [alignment, setAlignment] = React.useState("left");
+  const [alignment, setAlignment] = React.useState("");
+  const toggleClass = toggleStyles();
 
   const handleAlignment = (event, newAlignment) => {
     setAlignment(newAlignment);
@@ -21,22 +35,22 @@ export default function ToggleButtons() {
     >
       <ToggleButton
         value="left"
-        aria-label="left aligned"
+        aria-label="centered"
+        className={toggleClass.root}
         style={{
           display: "grid",
 
           borderRadius: "10px",
           maxWidth: "40%",
           marginRight: "2vh",
-          width: "20vh",
-          border: alignment ? "2px solid #674DE4" : "white",
+          width: "22vh",
         }}
       >
         <PersonIcon
           sx={{
             color: "#674DE4",
             fontSize: 35,
-            marginLeft: ".5vh",
+            marginLeft: "0vh",
             marginTop: "1.07vh",
 
             marginBottom: "1vh",
@@ -44,7 +58,7 @@ export default function ToggleButtons() {
         />
         <h4
           style={{
-            marginRight: "6vh",
+            marginRight: "8.5vh",
             textTransform: "capitalize",
             fontFamily: "Inter",
             marginTop: "-0.107vh",
@@ -65,23 +79,22 @@ export default function ToggleButtons() {
         </p>
       </ToggleButton>
       <ToggleButton
-        value="center"
-        aria-label="right aligned"
+        value="right "
+        aria-label="centered"
+        className={toggleClass.root}
         style={{
           display: "grid",
-
           borderRadius: "10px",
           maxWidth: "40%",
           marginLeft: "2vh",
-          width: "20vh",
-          border: alignment ? "2px solid #674DE4" : "white",
+          width: "22vh",
         }}
       >
         <GroupsIcon
           sx={{
             color: "#674DE4",
             fontSize: 35,
-            marginLeft: ".5vh",
+            marginLeft: "0vh",
             marginTop: "1.07vh",
 
             marginBottom: "1vh",
@@ -89,7 +102,7 @@ export default function ToggleButtons() {
         />
         <h4
           style={{
-            marginRight: "3vh",
+            marginRight: "5.5vh",
             textTransform: "capitalize",
             fontFamily: "Inter",
             marginTop: "-0.107vh",

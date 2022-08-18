@@ -26,6 +26,12 @@ function getStepContent(step) {
               fullWidth
               margin="normal"
               name="fullName"
+              style={{
+                width: "50vh",
+                display: "grid",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
             />
             <TextField
               id="last-name"
@@ -35,6 +41,12 @@ function getStepContent(step) {
               fullWidth
               margin="normal"
               name="displayName"
+              style={{
+                width: "50vh",
+                display: "grid",
+                marginLeft: "auto",
+                marginRight: "auto",
+              }}
             />
           </div>
         </>
@@ -55,9 +67,22 @@ function getStepContent(step) {
             fullWidth
             margin="normal"
             name="workspaceName"
+            style={{
+              width: "50vh",
+              display: "grid",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
           />
           <div
-            style={{ display: "flex", marginTop: "1vh", alignItems: "center" }}
+            style={{
+              display: "flex",
+              marginTop: "2vh",
+              alignItems: "center",
+              width: "50vh",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
           >
             <p
               style={{
@@ -65,14 +90,15 @@ function getStepContent(step) {
                 marginBottom: "auto",
                 marginRight: "0",
 
-                backgroundColor: "#D3D3D3",
+                backgroundColor: "#F8F9FC",
+                border: "1px solid #CCCCCC",
                 paddingTop: "2vh",
                 paddingBottom: "2vh",
                 paddingLeft: "1vh",
                 paddingRight: "1vh",
                 alignContent: "center",
                 alignItems: "center",
-                opacity: " 70%",
+                opacity: " 85%",
                 fontFamily: "Inter",
                 borderTopLeftRadius: "5px",
                 borderBottomLeftRadius: "5px",
@@ -90,7 +116,10 @@ function getStepContent(step) {
               fullWidth
               margin="normal"
               name="phoneNumber"
-              style={{ marginTop: "auto", marginBottom: "auto" }}
+              style={{
+                marginTop: "auto",
+                marginBottom: "auto",
+              }}
             />
           </div>
         </>
@@ -104,8 +133,8 @@ function getStepContent(step) {
           </h3>
           <div
             style={{
-              display: "flex ",
-              marginLeft: "9vh",
+              display: "incline ",
+              marginLeft: "7vh",
               marginRight: "auto",
               alignContent: "center",
               alignItems: "center",
@@ -186,13 +215,17 @@ const LinaerStepper = () => {
           className="nextButton"
           style={{
             marginTop: "5vh",
-            width: "100%",
+
             backgroundColor: "#674DE4",
             paddingTop: "2vh",
             paddingBottom: "2vh",
             color: "white",
             fontFamily: "Inter",
             textTransform: "capitalize",
+            width: "50vh",
+            display: "grid",
+            marginLeft: "auto",
+            marginRight: "auto",
           }}
         >
           {activeStep === steps.length - 1 ? "Launch Eden" : "Create Workspace"}
