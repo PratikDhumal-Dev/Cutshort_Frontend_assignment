@@ -13,6 +13,7 @@ In the project directory, you can run:
 
 installs all the dependencies on the local machine
 
+## Step 2
 ### `npm start`
 
 Runs the app in the development mode.\
