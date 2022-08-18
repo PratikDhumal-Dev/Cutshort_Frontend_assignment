@@ -1,0 +1,24 @@
+.app {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  max-width: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  font-family: "Inter";
+}
+.container {
+}
+
+.child {
+  border: none;
+  box-shadow: none;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -4vh;
+}
